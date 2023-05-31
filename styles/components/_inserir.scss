@@ -5,14 +5,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $cor-primaria;
+    margin: 5% 15% 0 15%;
+    border-radius: 1.5rem;
     label {
+        color: $cor-quaternaria;
         padding: 0.5rem;
-        background-color: $cor-secundaria;
         border-radius: 8px;
+        font-size: 1.5rem;
     }
     input {
         border-radius: 8px;
         width: 75%;
         margin-top: 1.5rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        color: $cor-quaternaria;
     }
 }

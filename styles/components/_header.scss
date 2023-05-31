@@ -1,12 +1,16 @@
 @import '../abstracts/variaveis';
 
 header {
-    font-size: 3.5rem;
-    background-color: $cor-terciaria;
-    color: $cor-primaria;
     padding: 1rem;
     text-align: center;
+    background-color: $cor-terciaria;
+    color: $cor-primaria;
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
     p {
         font-size: 1.8rem;
+        font-weight: 500;
     }
 }
