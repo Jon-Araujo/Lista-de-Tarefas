@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <title>CheckList</title>
 </head>
 
@@ -24,37 +27,22 @@
 
     <main>
         <article class="inserir-tarefa">
-            <label for="nova-tarefa">Insira abaixo a sua nova tarefa:</label>
+            <label for="nova-tarefa">Insira abaixo o título de sua nova tarefa:</label>
             <input type="text" id="nova-tarefa">
+            <label for="input-descricao">Insira a descrição da tarefa:</label>
+            <textarea type="text" id="input-descricao"></textarea>
+            <div>
+                <div>
+                    <label for="input-prazo">Insira o prazo:</label>
+                    <input type="date" id="input-prazo">
+                </div>
+                <button id="btn-inserir">Adicionar Tarefa<span class="material-symbols-outlined">add</span></button>
+            </div>
         </article>
 
-        <section class="cards">
-            <article class="card">
-                <div>
-                    <h3>Exemplo de Tarefa</h3>
-                    <button>X</button>
-                </div>
-                <img src="img/js.svg" alt="Logo do JavaScript.">
-                <p>Prazo:xxxxxxx</p>
-                <p>Prioridade: Tranquila</p>
-                <p class="descricao-card">Descrição:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                <button>Tarefa realizada<span class="material-symbols-outlined">check_circle</span></button>
-            </article>
-
-            <article class="card">
-                <div>
-                    <h3>Exemplo de Tarefa</h3>
-                    <button>X</button>
-                </div>
-                <img src="img/js.svg" alt="Logo do JavaScript.">
-                <p>Prazo:xxxxxxx</p>
-                <p>Prioridade: Tranquila</p>
-                <p class="descricao-card">Descrição:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                <button>Tarefa realizada<span class="material-symbols-outlined">check_circle</span></button>
-            </article>
-        </section>
+        <section class="cards"></section>
     </main>
-
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ header p {
   display: flex;
 }
 .cards .card {
-  border: 3px solid #112D4E;
+  border: 5px solid #112D4E;
   display: flex;
   flex-direction: column;
   width: 20%;
@@ -30,12 +30,12 @@ header p {
 .cards .card div {
   display: flex;
   justify-content: space-evenly;
-  margin: 0 0 2rem 0;
 }
 .cards .card div h3 {
   font-size: 1.5rem;
   color: #112D4E;
   font-weight: 700;
+  text-align: center;
 }
 .cards .card div button {
   border: none;
@@ -56,9 +56,13 @@ header p {
 }
 .cards .card img {
   border: 2px solid #F9F7F7;
-  padding: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 20px;
+  width: 100% -2px;
+  height: 200px;
+}
+.cards .card .descricao-card {
+  word-wrap: break-word;
 }
 .cards .card p {
   margin: 0.5rem 0;
@@ -66,13 +70,27 @@ header p {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.cards .card .descricao-card {
-  word-wrap: break-word;
+.cards .card div > p {
+  font-size: 0.8rem;
 }
-.cards .card button {
+.cards .card div + button {
   border-radius: 10px;
+  color: #112D4E;
+  background-color: #F9F7F7;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s span;
+  transition-margin-left: 1rem;
+}
+.cards .card div + button:hover {
   background-color: #112D4E;
   color: #3F72AF;
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 .inserir-tarefa {
@@ -91,13 +109,65 @@ header p {
   font-size: 1.5rem;
 }
 .inserir-tarefa input {
+  margin-bottom: 1rem;
   border-radius: 8px;
-  width: 75%;
-  margin-top: 1.5rem;
+  width: 70%;
   padding: 1rem;
   font-size: 1.3rem;
   color: #112D4E;
+  background-color: #F9F7F7;
   font-weight: 700;
+}
+.inserir-tarefa input:active {
+  border: none;
+}
+.inserir-tarefa textarea {
+  width: 80%;
+  height: 5rem;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #112D4E;
+  background-color: #F9F7F7;
+  font-weight: 700;
+}
+.inserir-tarefa textarea + div {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  text-align: center;
+}
+.inserir-tarefa textarea + div div {
+  width: 60%;
+}
+.inserir-tarefa textarea + div label {
+  font-size: 1.2rem;
+}
+.inserir-tarefa textarea + div input {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.inserir-tarefa textarea + div button {
+  display: flex;
+  margin: 0.7rem 5% 0 0;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  align-self: center;
+  color: #112D4E;
+  width: 50%;
+  justify-content: center;
+  transition: 0.5s;
+}
+.inserir-tarefa textarea + div button:hover {
+  transform: scale(1.1);
+  background-color: #112D4E;
+  color: #F9F7F7;
+  transition: 0.5s;
+}
+.inserir-tarefa textarea + div button span {
+  margin-left: 1rem;
 }
 
 html,

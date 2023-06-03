@@ -4,7 +4,7 @@
     padding: 5rem 7rem;
     display: flex;
     .card {
-        border: 3px solid $cor-primaria;
+        border: 5px solid $cor-primaria;
         display: flex;
         flex-direction: column;
         width: 20%;
@@ -15,11 +15,11 @@
         div {
             display: flex;
             justify-content: space-evenly;
-            margin: 0 0 2rem 0;
             h3 {
                 font-size: 1.5rem;
                 color: $cor-primaria;
                 font-weight: 700;
+                text-align: center;
             }
             button {
                 border: none;
@@ -41,9 +41,14 @@
         }
         img {
             border: 2px solid $cor-quaternaria;
-            padding: 0.5rem;
+            // padding: 0.5rem;
             margin-bottom: 1.5rem;
             border-radius: 20px;
+            width: 100% -2px;
+            height: 200px;
+        }
+        .descricao-card {
+            word-wrap: break-word;
         }
         p {
             margin: 0.5rem 0;
@@ -51,13 +56,29 @@
             font-weight: 500;
             font-size: 1.2rem;
         }
-        .descricao-card {
-            word-wrap: break-word;
+        div > p {
+            font-size: 0.8rem;
         }
-        button {
+        div + button {
             border-radius: 10px;
-            background-color: $cor-primaria;
-            color: $cor-secundaria;
+            color: $cor-primaria;            
+            background-color: $cor-quaternaria;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s
+            span {
+                margin-left: 1rem;
+            }
+            &:hover {
+                background-color: $cor-primaria;
+                color: $cor-secundaria;
+                transform: scale(1.1);
+                transition: 1s;
+            }
         }
     }
 }
