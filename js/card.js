@@ -13,20 +13,18 @@ export function card(titulo, descricao, prazo) {
     document.querySelector('.cards').innerHTML +=
         `
     <article class="card">
-        <div>
-            <h3>${titulo}</h3>
-            <button class="btn-exclui">X</button>
-        </div>
+        <h3 class="titulo-card">${titulo}</h3>
+        <button class="btn-exclui">X</button>
         <p class="descricao-card">Descrição: </br>${descricao}</p>
         <div>
-            <p>Prazo:${prazo}</p>
-            <p>Prioridade: Tranquila</p>
+            <p class="prazo-card">Prazo:${prazo}</p>
+            <p class="prioridade-card">Prioridade: Tranquila</p>
         </div>
         <button class="btn-realizada">Tarefa realizada<span class="material-symbols-outlined">check_circle</span></button>
     </article>
     `
     btnExclui();
-    btnRealizado(titulo, descricao, prazo)
+    btnRealizado(titulo, descricao, prazo);
 };
 
 function btnExclui() {
@@ -43,14 +41,21 @@ function btnExclui() {
     }
 };
 
-function btnRealizado(titulo, descricao, prazo) {
+function btnRealizado() {
     const btn = document.querySelectorAll('.btn-realizada');
+    const titulo = document.querySelectorAll('.titulo-card');
+    const descricao = document.querySelectorAll('.descricao-card');
+    const prazo = document.querySelectorAll('.prazo-card');
+    const prioridade = document.querySelectorAll('.prioridade-card');
+    const card = document.querySelectorAll('.card');
 
     for (let i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", () => {
-            titulo.style.textDecoration = lineThrough;
-            descricao.style.textDecoration = lineThrough;
-            prazo.style.textDecoration = lineThrough;
+            titulo[i].style.textDecoration = "line-through";
+            descricao[i].style.textDecoration = "line-through";
+            prazo[i].style.textDecoration = "line-through";
+            prioridade[i].style.textDecoration = "line-through";
+            card[i].style.opacity = "0.8";
         })
     }
 }

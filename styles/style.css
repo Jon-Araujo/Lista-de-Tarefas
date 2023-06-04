@@ -15,65 +15,68 @@ header p {
 
 .cards {
   padding: 5rem 7rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  width: 100%;
+  gap: 10%;
 }
 .cards .card {
   border: 5px solid #112D4E;
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 100%;
   padding: 1rem;
-  margin: 0 6rem 6rem 0;
+  margin: 0 6rem 0 0;
   background-color: #3F72AF;
   border-radius: 20px;
+  max-height: 15rem;
+  min-height: 15rem;
 }
-.cards .card div {
-  display: flex;
-  justify-content: space-evenly;
-}
-.cards .card div h3 {
+.cards .card h3 {
   font-size: 1.5rem;
   color: #112D4E;
   font-weight: 700;
   text-align: center;
 }
-.cards .card div button {
+.cards .card h3 + button {
   border: none;
   font-weight: 900;
-  padding: 0.8rem 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 10%;
   color: #3F72AF;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #112D4E;
   position: relative;
-  right: -2.5rem;
-  top: -1.7rem;
+  left: 19rem;
+  top: -3rem;
   transition: 0.5s;
 }
-.cards .card div button:hover {
+.cards .card h3 + button:hover {
   cursor: pointer;
   color: #F9F7F7;
   transition: 0.5s;
 }
-.cards .card img {
+.cards img {
   border: 2px solid #F9F7F7;
   margin-bottom: 1.5rem;
   border-radius: 20px;
   width: 100% -2px;
   height: 200px;
 }
-.cards .card .descricao-card {
+.cards .descricao-card {
   word-wrap: break-word;
 }
-.cards .card p {
+.cards p {
   margin: 0.5rem 0;
   color: #F9F7F7;
   font-weight: 500;
   font-size: 1.2rem;
 }
-.cards .card div > p {
+.cards div > p {
   font-size: 0.8rem;
 }
-.cards .card div + button {
+.cards div + button {
   border-radius: 10px;
   color: #112D4E;
   background-color: #F9F7F7;
@@ -86,7 +89,7 @@ header p {
   transition: 1s span;
   transition-margin-left: 1rem;
 }
-.cards .card div + button:hover {
+.cards div + button:hover {
   background-color: #112D4E;
   color: #3F72AF;
   transform: scale(1.1);
