@@ -1,19 +1,20 @@
 @import '../abstracts/variaveis';
 
 .inserir-tarefa {
-    padding: 5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $cor-primaria;
-    margin: 5% 15% 0 15%;
-    border-radius: 1.5rem;
+    width: 35%;
+    height: 100vh;
+
     label {
         color: $cor-quaternaria;
         padding: 0.5rem;
-        border-radius: 8px;
         font-size: 1.5rem;
     }
+
     input {
         margin-bottom: 1rem;
         border-radius: 8px;
@@ -23,10 +24,12 @@
         color: $cor-primaria;
         background-color: $cor-quaternaria;
         font-weight: 700;
+
         &:active {
             border: none
         }
     }
+
     textarea {
         width: 80%;
         height: 5rem;
@@ -37,42 +40,28 @@
         background-color: $cor-quaternaria;
         font-weight: 700;
     }
-    textarea + div {
-        width: 100%;
+
+    button {
         display: flex;
-        margin-top: 1rem;
-        justify-content: space-between;
-        text-align: center;
-        div {
-            width: 60%;
-        }
-        label {
-            font-size: 1.2rem;
-        }
-        input {
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
-        button {
-            display: flex;
-            margin: 0.7rem 5% 0 0;
-            border-radius: 8px;
-            padding: 1rem;
-            font-size: 1.2rem;
-            align-self: center;
-            color: $cor-primaria;
-            width: 50%;
-            justify-content: center;
+        margin: 3rem;
+        border-radius: 8px;
+        padding: 1rem;
+        font-size: 1.2rem;
+        align-self: center;
+        color: $cor-primaria;
+        width: 70%;
+        justify-content: center;
+        transition: 0.5s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: $cor-primaria;
+            color: $cor-quaternaria;
             transition: 0.5s;
-            &:hover {
-                transform: scale(1.1);
-                background-color: $cor-primaria;
-                color: $cor-quaternaria;
-                transition: 0.5s;
-            }
-            span {
-                margin-left: 1rem;
-            }
+        }
+
+        span {
+            margin-left: 1rem;
         }
     }
 }

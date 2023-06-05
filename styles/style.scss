@@ -7,4 +7,9 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-size: 16px;
     background-color: $cor-terciaria;
+    height: 100vh;
+}
+
+main {
+    display: flex;
 }

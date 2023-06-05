@@ -6,7 +6,7 @@ const prazo = document.getElementById('input-prazo');
 
 export function manipulaDados() {
     if (localStorage.cards) {
-        var lista = JSON.parse(localStorage.getItem('cards')); 
+        var lista = JSON.parse(localStorage.getItem('cards'));
     } else {
         var lista = [];
     }
@@ -16,7 +16,7 @@ export function manipulaDados() {
     localStorage.cards = JSON.stringify(lista);
 
     card(titulo.value, descricao.value, prazo.value);
-    
+
 
     titulo.value = '';
     descricao.value = '';

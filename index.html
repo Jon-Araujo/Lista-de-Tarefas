@@ -27,17 +27,16 @@
 
     <main>
         <article class="inserir-tarefa">
-            <label for="nova-tarefa">Insira abaixo o título de sua nova tarefa:</label>
+            <label for="nova-tarefa">Insira abaixo o título de sua tarefa:</label>
             <input type="text" id="nova-tarefa">
+            
+            <label for="input-prazo">Insira o prazo:</label>
+            <input type="date" id="input-prazo">
+            
             <label for="input-descricao">Insira a descrição da tarefa:</label>
             <textarea type="text" id="input-descricao"></textarea>
-            <div>
-                <div>
-                    <label for="input-prazo">Insira o prazo:</label>
-                    <input type="date" id="input-prazo">
-                </div>
-                <button id="btn-inserir">Adicionar Tarefa<span class="material-symbols-outlined">add</span></button>
-            </div>
+            
+            <button id="btn-inserir">Adicionar Tarefa<span class="material-symbols-outlined">add</span></button>
         </article>
 
         <section class="cards"></section>
